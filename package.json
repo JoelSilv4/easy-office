@@ -1,0 +1,9 @@
+{
+    "name": "easy-office-raiz",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+   "start": "node ./site-institucionalbin/www",
+    "postinstall": "cd site-institucional && npm install"
+    }
+   }

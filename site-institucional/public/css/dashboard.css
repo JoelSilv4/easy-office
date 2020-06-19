@@ -1,0 +1,219 @@
+/* informações do funcionario */
+
+.conteudo-principal {
+  margin-left: 210px;
+  background-color: #F5F5F5;
+}
+
+.funcionario {
+  display: flex;
+  margin: 0 115px 0 115px;
+  padding-top: 50px;
+  border-bottom: solid 1px black;
+}
+
+.funcionario h1 {
+  font-size: 28px;
+  margin-left: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.funcionario img {
+  width: 40px;
+  margin: 0 0 5px 0;
+}
+
+.dados-funcionario {
+  margin: 20px 115px 0 115px;
+}
+
+.dados-funcionario h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dados-funcionario p {
+  font-size: 20px;
+}
+
+.div-nome {
+  display: flex;
+  margin: 0 0 10px 0;
+}
+.div-nome p {
+  margin: 0 0 0 10px;
+}
+
+.div-registro {
+  display: flex;
+}
+
+.div-registro p {
+  margin: 0 0 0 10px;
+}
+
+/* informações do dispositivo */
+
+.container-info-dispositivo {
+  background-color: white;
+  width: 95%;
+  margin: 40px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dispositivo {
+  display: flex;
+  margin: 0 80px 0 80px;
+  padding-top: 30px;
+  border-bottom: solid 1px black;
+}
+
+.dispositivo h1 {
+  font-size: 28px;
+  margin-left: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.dispositivo img {
+  width: 40px;
+  margin: 0 0 5px 0;
+}
+
+.dados-dispositivo {
+  margin: 20px 0 0 80px;
+}
+
+.dados-dispositivo h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dados-dispositivo p {
+  font-size: 20px;
+}
+
+.barra-horizontal {
+  width: 800px;
+  margin:  0 0 0 80px;
+  padding-bottom: 30px;
+}
+
+/* sessão alertas */
+
+.container-alertas a{
+  text-decoration: none;
+  color: black;
+}
+
+.container-alertas {
+  display: flex;
+  margin: 0 0 0 25px;
+}
+
+.container-alertas hr {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.icon-alerta {
+  background-color: #FFC86E;
+  width: 85px;
+  height: 93px;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0 100px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.icon-alerta img{
+  width: 65px;
+  align-self: center;
+}
+
+.info-alerta {
+  background-color: white;
+  width: 300px;
+  height: 170px;
+  margin: -40px 0 0 70px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.info-msg img {
+  width: 25px;
+}
+
+.info-processo h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 0 160px;
+  padding-top: 20px;
+}
+
+.info-processo p {
+  font-size: 24px;
+  margin: 0 0 0 160px;
+  padding-top: 10px;
+}
+
+.info-msg {
+  display: flex;
+  margin: 25px 0 0 15px;
+}
+
+.info-msg p {
+  margin: 10px 0 0 7px;
+}
+
+/* sessão de gráficos pequenos */
+
+.container-graficos {
+  display: flex;
+  margin: 0 0 0 15px;
+}
+
+.picos-grafico {
+  background-color: white;
+  width: 360px;
+  height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  margin: -120px 0 30px 30px;
+}
+
+.picos-grafico h2 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 120px;
+}
+
+.grafico-pequeno {
+  position: relative;
+  width: 325px;
+  height: 200px;
+  margin: 0 0 0 45px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #FFC86E;
+  z-index: 1;
+}
+
+.picos {
+  display: flex;
+  padding-top: 20px;
+  margin: 0 240px 0 0;
+}
+
+.picos img{
+  width: 30px;
+}
+
+.picos p {
+  font-size: 20px;
+  margin: 5px 0 0 10px;
+}
+

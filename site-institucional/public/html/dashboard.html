@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/reset-css.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sidenav.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="sidenav">
+    <nav>
+        <div class="div-logo">
+            <img class="img-logo" src="../imagens/logo .png" alt="">
+        </div>
+
+        <hr>
+
+        <div class="div-menu">
+            <ul>
+                <a href="perfil.html"><li>Perfil</li></a>
+                <a href="funcionarios.html"><li class="active">Funcionários</li></a>
+                <a href="historico.html"><li>Histórico</li></a>
+                <a href="../html/funcionarios.html"><li>Voltar</li></a>
+                <a href="index.html"><li>Sair</li></a>
+            </ul>
+        </div>
+    </nav>
+    </div>
+
+    <div class="conteudo-principal">
+        <main>
+
+            <section>
+
+                <div class="funcionario">
+                    <img src="../imagens/user.png" alt="">
+                    <h1>Funcionário</h1>
+
+                </div>
+
+                <div class="dados-funcionario">
+                    <div class="div-nome">
+                        <h2>Nome:</h2>
+                        <p>Gustavo Lins</p>
+                    </div>
+                    
+                    <div class="div-registro">
+                        <h2>Registro do Funcionário:</h2>
+                        <p>1121454</p>
+                    </div>
+                    
+                </div>
+
+            </section>
+
+            <section>
+
+                    <div class="container-alertas">
+
+                        
+                                <div class="div-alerta">
+
+                                        <div class="icon-alerta">
+                                            <img src="../imagens/cpu.png" alt="">
+                                        </div>
+        
+                                    <a href="historico.html">
+                                        <div class="info-alerta">
+        
+                                        <div class="info-processo">
+                                            <h2>CPU</h2>
+                                            <p>84.2%</p>
+                                        </div>
+        
+                                        <hr>
+        
+                                        <div class="info-msg">
+                                            <img src="../imagens/alert.png" alt="">
+                                            <p>Alto nível de processamento!</p>
+                                        </div>
+                                            
+                                        </div>
+                                    </a>
+        
+                                    </div>
+
+                            <div class="div-alerta">
+
+                                    <div class="icon-alerta">
+                                        <img src="../imagens/hard-disk-drive.png" alt="">
+                                    </div>
+    
+                                <a href="historico.html">
+                                    <div class="info-alerta">
+    
+                                    <div class="info-processo">
+                                        <h2>Disco</h2>
+                                        <p>12.5%</p>
+                                    </div>
+    
+                                    <hr>
+                                        
+                                    </div>
+                                </a>
+    
+                                </div>
+
+                                <div class="div-alerta">
+
+                                        <div class="icon-alerta">
+                                            <img src="../imagens/ram.png" alt="">
+                                        </div>
+        
+                                    <a href="historico.html">
+                                        <div class="info-alerta">
+        
+                                        <div class="info-processo">
+                                            <h2>Memória</h2>
+                                            <p>92.8%</p>
+                                        </div>
+        
+                                        <hr>
+        
+                                        <div class="info-msg">
+                                            <img src="../imagens/alert.png" alt="">
+                                            <p>Memória quase cheia!</p>
+                                        </div>
+                                            
+                                        </div>
+                                    </a>
+        
+                                    </div>
+
+                        </div>
+
+            </section>
+
+            <section>
+
+                <div class="container-info-dispositivo">
+
+                    <div class="dispositivo">
+                        <img class="img-icon-computer" src="../imagens/icon-computer.png" alt="">
+                        <h1>Dispositivo</h1>
+                    </div>
+
+                    <div class="dados-dispositivo">
+
+                        <div class="div-nome">
+                            <h2>Sistema Operacional:</h2>
+                            <p>Microsoft Windows 10</p>
+                        </div>
+
+                        <div class="div-nome">
+                            <h2>Processador:</h2>
+                            <p>Intel Core i7-6600U CPU @2.60GHz</p>
+                        </div>
+            
+                        <div class="div-nome">
+                            <h2>RAM:</h2>
+                            <p>8,00 GB</p>
+                        </div>
+            
+                        <div class="div-nome">
+                            <h2>HD:</h2>
+                            <p>1 TB</p>
+                        </div>
+
+                        <div class="barra-horizontal">
+                                <canvas id="barraHorizontal"></canvas>
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                <script src="../js/dash-barra.js"></script>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <div class="container-graficos">
+
+                    <div class="div-graficos">
+
+                    <div class="grafico-pequeno">
+                        <canvas class="grafico-cpu"></canvas>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+                        <script src="../js/dash-cpu.js"></script>
+                    </div>
+
+                    <div class="picos-grafico">
+                        <h2>CPU</h2>
+
+                        <div class="picos">
+                            <img src="../imagens/up-arrow.png" alt="">
+                            <p>84.2%</p>
+                        </div>
+
+                        <div class="picos">
+                            <img src="../imagens/down-arrow.png" alt="">
+                            <p>34.7%</p>
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                    <div class="div-graficos">
+
+                        <div class="grafico-pequeno">
+                            <canvas class="grafico-disco"></canvas>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+                            <script src="../js/dash-disco.js"></script>
+                        </div>
+    
+                        <div class="picos-grafico">
+                            <h2>Disco</h2>
+    
+                            <div class="picos">
+                                <img src="../imagens/up-arrow.png" alt="">
+                                <p>29.3%</p>
+                            </div>
+    
+                            <div class="picos">
+                                <img src="../imagens/down-arrow.png" alt="">
+                                <p>12.5%</p>
+                            </div>
+    
+                        </div>
+    
+                        </div>
+
+                        <div class="div-graficos">
+
+                            <div class="grafico-pequeno">
+                                <canvas class="grafico-memoria"></canvas>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+                                <script src="../js/dash-memoria.js"></script>
+                            </div>
+        
+                            <div class="picos-grafico">
+                                <h2>Memória</h2>
+        
+                                <div class="picos">
+                                    <img src="../imagens/up-arrow.png" alt="">
+                                    <p>98.2%</p>
+                                </div>
+        
+                                <div class="picos">
+                                    <img src="../imagens/down-arrow.png" alt="">
+                                    <p>56.4%</p>
+                                </div>
+        
+                            </div>
+        
+                            </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <script type="text/javascript">
+            // <![CDATA[
+            var ttChatLoaderS = document.createElement('script');
+            document.tomticketChatLoaderScriptVersion = 2;
+            ttChatLoaderS.src = 'https://easyoffice.tomticket.com/scripts-chat/chat.min.js'
+            + '?id=EP46884'
+            + '&autoOpen=0'
+            + '&hideWhenOffline=0'
+            + '&d=easyoffice'
+            + '&ts=' + new Date().getTime()
+            + '&ref=' + encodeURIComponent(document.URL);
+            document.body.appendChild(ttChatLoaderS);
+            //]]>
+            </script>
+            
+            
+    
+        <footer>
+            <div class="container-footer">
+                <img src="../imagens/logo .png" alt="">
+
+                <div class="container-contato">
+
+                <div class="contato-footer">
+                    <h5>Contato</h5>
+                    <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
+                </div>
+
+                <div class="social-footer">
+                    <img src="../imagens/facebook.png" alt="">
+                    <img src="../imagens/instagram.png" alt="">
+                    <img src="../imagens/youtube.png" alt="">
+                </div>
+                    
+            </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

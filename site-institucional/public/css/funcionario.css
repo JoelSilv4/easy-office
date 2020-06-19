@@ -1,0 +1,92 @@
+.sessao-funcionarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sessao-funcionarios img{
+  width: 430px;
+  align-self: center;
+}
+
+.sessao-funcionarios h1 {
+  font-size: 56px;
+  margin: 0 0 30px 0;
+  align-self: center;
+}
+
+.sessao-funcionarios hr {
+  margin: 0 0 30px 0;
+  align-self: center;
+}
+
+.container-alertas {
+    display: flex;
+    margin: 0 0 0 25px;
+    flex-wrap: wrap;
+  }
+
+.container-alertas a {
+  text-decoration: none;
+  color: black;
+}
+
+.conteudo-principal {
+    margin-left: 210px;
+  }
+
+  .icon-alerta {
+    background-color: #FFC86E;
+    width: 150px;
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+  
+  .icon-alerta img{
+    width: 90px;
+    align-self: center;
+  }
+  
+  .info-alerta {
+    background-color: #F5F5F5;
+    width: 490px;
+    height: 250px;
+    margin: -50px 0 50px 70px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .info-msg img {
+    width: 40px;
+  }
+  
+  .info-processo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 0 200px;
+    padding-top: 28px;
+  }
+  
+  .info-processo p {
+    font-size: 28px;
+    margin: 0 0 0 200px;
+    padding-top: 10px;
+  }
+  
+  .info-msg {
+    display: flex;
+    margin: 0 0 0 32px;
+  }
+  
+  .info-msg p {
+    margin: 15px 0 0 7px;
+    font-size: 18px;
+  }
+
+  .div-alerta hr {
+    width: 80%;
+    margin: 35px auto;
+  }

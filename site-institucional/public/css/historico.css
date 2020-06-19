@@ -1,0 +1,144 @@
+.conteudo-principal {
+    margin-left: 210px;
+  }
+
+  /* sessão titulo */
+
+  .sessao-funcionarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sessao-funcionarios img{
+    width: 430px;
+    align-self: center;
+  }
+  
+  .sessao-funcionarios h1 {
+    font-size: 56px;
+    margin: 0 0 30px 0;
+    align-self: center;
+  }
+  
+  .sessao-funcionarios hr {
+    margin: 0 0 30px 0;
+    align-self: center;
+  }
+
+  /* sessão dados funcionario */
+
+  .funcionario {
+    display: flex;
+    margin: 0 115px 0 115px;
+    padding-top: 50px;
+    border-bottom: solid 1px black;
+  }
+  
+  .funcionario h1 {
+    font-size: 28px;
+    margin-left: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+  
+  .funcionario img {
+    width: 40px;
+    margin: 0 0 5px 0;
+  }
+  
+  .dados-funcionario {
+    margin: 20px 115px 0 115px;
+  }
+  
+  .dados-funcionario h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .dados-funcionario p {
+    font-size: 20px;
+  }
+  
+  .div-nome {
+    display: flex;
+    margin: 0 0 10px 0;
+  }
+  .div-nome p {
+    margin: 0 0 0 10px;
+  }
+
+  /* sessão alertas */
+
+  .container-alertas {
+    display: flex;
+    margin: 0 0 25px 25px;
+  }
+  
+  .container-alertas hr {
+    width: 90%;
+    margin: 25px auto;
+  }
+  
+  .icon-alerta {
+    background-color: #FFC86E;
+    width: 85px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+  
+  .icon-alerta img{
+    width: 65px;
+    align-self: center;
+  }
+  
+  .info-alerta {
+    background-color: #F5F5F5;
+    width: 300px;
+    height: 240px;
+    margin: -40px 0 0 70px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .info-msg img {
+    width: 25px;
+  }
+  
+  .info-processo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 0 160px;
+    padding-top: 20px;
+  }
+  
+  .info-processo p {
+    font-size: 24px;
+    margin: 0 0 0 160px;
+    padding-top: 10px;
+  }
+  
+  .info-msg {
+    display: flex;
+    margin: 25px 0 0 15px;
+  }
+  
+  .info-msg p {
+    margin: 10px 0 0 7px;
+  }
+
+  .info-horario {
+      display: flex;
+      margin: 0 0 0 15px;
+  }
+
+  .info-horario p{
+      margin: 0 0 0 10px;
+  }
+
+  .info-horario h2 {
+      font-weight: bold;
+  }

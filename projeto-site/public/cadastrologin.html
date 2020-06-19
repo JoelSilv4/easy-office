@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Witcher 3 : Wild Hunt</title>
+    <link rel="stylesheet" href="./css/Login.css">
+    <script src="./js/Login.js"></script>
+    <link rel="icon" type = "image/x-icon" href="img/iconthe.png">
+</head>
+<body>
+        <nav class="menu-principal">
+            <ul class="menu">
+                </li>
+                <a href="" class="link"><img src="img/link.png" alt=""></a>
+                <a href="" class="steam"><img src="img/steam2.ico" alt=""></a>
+                <a href="" class="facebook"><img src="img/facebook.png" alt=""></a>
+                    </ul>
+                </li>  
+            </ul>
+        
+        </nav>  
+    <div class="container">
+        <div class="box-0">
+             <a href="cadastrologin.html"><img src="img/witcher4k.png" alt="" class="icon_box" style="display: block" id="box_0"></a> 
+              <button onclick="tela_cadastro()" class="box-0-btn" style="display: block" id="btn_cadastro">CADASTRAR</button><br>
+              <button onclick="tela_login()" class="box-0-btn1" style="display: block" id="btn_login">LOGIN</button>
+              <button onclick="tela_site()" class="box-0-btn2" style="display: block" id="btn_oficial">SITE OFICIAL</button>
+        </div>
+
+        <div class="box" id="box_1">
+            <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+              <a href="cadastrologin.html"><img src="img/witcher4k.png" alt="" class="icon_box"></a>
+                <input placeholder="Nome" type="text" class="nome_box" name="nome" required  minlength="4"> 
+                <input placeholder="Email" type="email" class="email_box" id="email_box1" name="login" required  minlength="4">
+                <input placeholder="Senha" type="password" class="senha_box" id="senha_box1" name="senha" required  minlength="4"> 
+                <div class="checkbox_box"><input type="checkbox" class="checkbox_box1">Eu aceito os termos de uso</div>
+                <button type="button" class="cadastro">Cadastrar-Se</button>
+            </form>
+        </div>
+
+        <div class="box-2" id="box_2">
+            <form id="form_login" method="post" onsubmit="return entrar()">
+               <a href="cadastrologin.html"><img src="img/witcher4k.png" alt="" class="icon_box-2"></a>
+                <input placeholder="Email" type="text" class="email_box-2" id="email_box2" name="login2" required autofocus>
+                <input placeholder="Senha" type="password" class="senha_box-2" id="senha_box2" name="senha2" required><br><br>
+                <div class="conectado_box"><input type="checkbox" class="checkbox_box2">Manter-se Conectado</div><br><br>
+                <button type="button" class="login-button">Logar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                box_1.style.display= "none";
+                box_2.style.display= "block";
+                box.style.display = "none";
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function entrar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login2_usuario_meuapp = json.login2;
+                    sessionStorage.nome2_usuario_meuapp = json.nome2;
+                    
+                    window.location.href = 'tempo-real.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+</script>
