@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-   "start": "node ./site-institucionalbin/www",
+   "start": "node ./site-institucional/bin/www",
     "postinstall": "cd site-institucional && npm install"
     },
     "dependencies": {
@@ -16,4 +16,4 @@
         "sequelize": "^5.21.2",
         "tedious": "^6.6.0"
       }
-    }ss
+    }
