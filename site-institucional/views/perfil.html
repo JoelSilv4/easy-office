@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../stylesheets/reset-css.css">
+    <link rel="stylesheet" href="../stylesheets/footer.css">
+    <link rel="stylesheet" href="../stylesheets/sidenav.css">
+    <link rel="stylesheet" href="../stylesheets/perfil.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <title>Perfil</title>
+</head>
+<body>
+
+    <div class="sidenav">
+        <nav>
+            <div class="div-logo">
+                <img class="img-logo" src="../images/logo .png" alt="">
+            </div>
+            
+            <hr>
+            
+            <div class="div-menu">
+                <ul>
+                    <a href="perfil"><li class="active">Perfil</li></a>
+                    <a href="funcionarios"><li>Funcionários</li></a>
+                    <a href="/"><li>Sair</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="conteudo-principal">
+
+        <main>
+            
+            <section>
+                <div class="sessao-funcionarios">
+        
+                    <img src="../images/chefe.jpg" alt="">
+        
+                    <h1>Empresa</h1>
+        
+                    <hr>
+                </div>
+            </section>
+
+            <section>
+
+                <div class="funcionario">
+                    <img src="../images/user.png" alt="">
+                    <h1>Chefe: Nome</h1>
+    
+                </div>
+    
+            </section>
+
+            <section>
+
+                <div class="msg-total">
+                    <p><strong>Com base na porcentagem de uso do hardware, 9 máquinas de funcionários
+                            estão prestes a atingir o limite máximo!</strong> 
+                    </p>
+                </div>
+
+                <div class="container-alertas">
+
+                        
+                    <div class="div-alerta">
+
+                            <div class="icon-alerta">
+                                <img src="../images/cpu.png" alt="">
+                            </div>
+
+                            <div class="info-alerta">
+
+                            <div class="info-processo">
+                                <h2>CPU</h2>
+                                <img src="../images/alert.png" alt="">
+                            </div>
+
+                            <hr>
+
+                            <div class="info-msg">
+                                <p><strong>3</strong> máquinas estão prestes a atingir o limite máximo de CPU!</p>
+                            </div>
+                                
+                            </div>
+
+                        </div>
+
+                <div class="div-alerta">
+
+                        <div class="icon-alerta">
+                            <img src="../images/hard-disk-drive.png" alt="">
+                        </div>
+
+                        <div class="info-alerta">
+
+                        <div class="info-processo">
+                            <h2>Disco</h2>
+                        </div>
+
+                        <hr>
+
+                        <div class="info-msg">
+                            <p>Tudo ok por aqui!</p>
+                            <img src="../images/good.png" alt="">
+                        </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="div-alerta">
+
+                            <div class="icon-alerta">
+                                <img src="../images/ram.png" alt="">
+                            </div>
+
+                            <div class="info-alerta">
+
+                            <div class="info-processo">
+                                <h2>Memória</h2>
+                                <img src="../images/alert.png" alt="">
+                            </div>
+
+                            <hr>
+
+                            <div class="info-msg">
+                                <p><strong>6</strong> máquinas estão prestes a atingir o limite máximo de memória!</p>
+                            </div>
+                                
+                            </div>
+
+                        </div>
+
+            </div>
+            </section>
+
+            <section>
+                
+                <div class="container-graficos">
+
+                        <div class="div-graficos padding-graficos">
+
+                                <div class="div-produtividade">
+                                    <h2>Picos de alertas de hardware na semana</h2>
+                                </div>
+                
+                                    <div class="picos-grafico">
+    
+                                        <div class="grafico-pequeno">
+                                            <canvas class="grafico-alertas"></canvas>
+                                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+                                            <script src="../javascripts/dash-picos-alertas.js"></script>
+                                        </div>
+    
+                                        <div class="dados-picos">
+                                                <div class="picos">
+                                                        <img src="../images/up-arrow.png" alt="">
+                                                        <p>Dia da semana com mais alertas: Sexta</p>
+                                                    </div>
+                            
+                                                    <div class="picos">
+                                                        <img src="../images/down-arrow.png" alt="">
+                                                        <p>Dia da semana com menos alertas: Quarta</p>
+                                                    </div>
+    
+                                        </div>
+                
+                                    </div>
+                
+                            </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <script type="text/javascript">
+            // <![CDATA[
+            var ttChatLoaderS = document.createElement('script');
+            document.tomticketChatLoaderScriptVersion = 2;
+            ttChatLoaderS.src = 'https://easy-office.tomticket.com/scripts-chat/chat.min.js'
+            + '?id=EP46351'
+            + '&account=2966464P04062020023552'
+            + '&autoOpen=0'
+            + '&hideWhenOffline=0'
+            + '&d=easy-office'
+            + '&ts=' + new Date().getTime()
+            + '&ref=' + encodeURIComponent(document.URL);
+            document.body.appendChild(ttChatLoaderS);
+            //]]>
+            </script>
+            
+
+        <footer>
+            <div class="container-footer">
+                <img src="../images/logo .png" alt="">
+        
+                <div class="container-contato">
+        
+                <div class="contato-footer">
+                    <h5>Contato</h5>
+                    <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
+                </div>
+        
+                <div class="social-footer">
+                    <img src="../images/facebook.png" alt="">
+                    <img src="../images/instagram.png" alt="">
+                    <img src="../images/youtube.png" alt="">
+                </div>
+                            
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
