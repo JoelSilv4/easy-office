@@ -1,17 +1,17 @@
 var Connection = require('tedious').Connection;  
     var config = {  
-        server: 'your_server.database.windows.net',  //update me
+        server: 'svreasyoffice.database.windows.net',  //update me
         authentication: {
             type: 'default',
             options: {
-                userName: 'your_username', //update me
-                password: 'your_password'  //update me
+                userName: 'EasyAdm', //update me
+                password: '#Gfgrupo2'  //update me
             }
         },
         options: {
             // If you are on Microsoft Azure, you need encryption:
             encrypt: true,
-            database: 'your_database'  //update me
+            database: 'bdEasyOffice'  //update me
         }
     };  
     var connection = new Connection(config);  
