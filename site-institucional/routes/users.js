@@ -13,14 +13,14 @@ router.get('/', function(req, res, next) {
 router.post('/autenticar', function(req, res, next) {
 	console.log('Recuperando usuário por login e senha');
 
-	var login = req.body.login; // depois de .body, use o nome (name) do campo em seu formulário de login
+	var login = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
 	
-	let instrucaoSql = `select * from usuario where login='${login}' and senha='${senha}'`;
+	let instrucaoSql = `select * from usuario where email='${login}' and senha='${senha}'`;
 	console.log(instrucaoSql);
 
 	sequelize.query(instrucaoSql, {
-		model: Usuario
+		model: Users
 	}).then(resultado => {
 		console.log(`Encontrados: ${resultado.length}`);
 
@@ -45,7 +45,8 @@ router.post('/', function(req, res, next) {
 	console.log('Criando um usuário');
 	
 	Usuario.create({
-		nome : req.body.nome,
+    nomeEmpresa : req.body.nomeEmpresa,
+    cnpj : req.body.cnpj,
 		login : req.body.login,
 		senha: req.body.senha
 	}).then(resultado => {
