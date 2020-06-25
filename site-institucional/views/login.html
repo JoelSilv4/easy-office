@@ -11,7 +11,7 @@
     
     <div class="fundo cx_login">
 
-        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+        <form id="form_login" method="post" onsubmit="return entrar()">
             
             <div id="cx_form">
 
@@ -53,38 +53,28 @@
 
 <script>
 
-    function entrar() {
-        aguardar();
-        var formulario = new URLSearchParams(new FormData(form_login));
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            body: formulario
-        }).then(resposta => {
-            
-            if (resposta.ok) {
+function entrar() {
+            aguardar();
+            var formulario = new URLSearchParams(new FormData(form_login));
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
 
-                resposta.json().then(json => {
-
-                    sessionStorage.login_usuario_meuapp = json.login;
-                    sessionStorage.nome_usuario_meuapp = json.nome;
-                    
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                    sessionStorage.usuario = resposta.nome;
                     window.location.href = 'perfil';
-                });
-
-            } else {
-
-                console.log('Erro de login!');
-
-                response.text().then(texto => {
-                    console.error(texto);
-                    finalizar_aguardar(texto);
-                });
-            }
-        });
-
-        return false;
-    }
-
+                    });
+                } else {
+                    console.log('Erro de login!');
+                    div_msg.innerHTML = 'Usuário e/ ou senha incorretos!'
+                    finalizar_aguardar();
+                }
+            }); 
+            return false;
+        }
+        
     function aguardar() {
         btn_entrar.disabled = true;
         carregar.style.display = 'block';

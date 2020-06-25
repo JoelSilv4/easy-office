@@ -8,39 +8,30 @@ router.get('/', function(req, res, next) {
 	res.send('respond with a resource');
   });
 
-// let sessoes = [];
-
 /* Recuperar usuário por login e senha */
-router.post('/usuarios/autenticar', function(req, res, next) {
+router.post('/autenticar', function(req, res, next) {
 	console.log('Recuperando usuário por login e senha');
 
 	var login = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
-	
-	let instrucaoSql = `select * from CONTRATANTE where email='${login}' and senha='${senha}'`;
-	console.log(instrucaoSql);
 
-	sequelize.query(instrucaoSql, {
-		model: Usuario
-	}).then(resultado => {
-		console.log(`Encontrados: ${resultado.length}`);
-
-		if (resultado.length == 1) {
-			sessoes.push(resultado[0].dataValues.login);
-			console.log('sessoes: ',sessoes);
-			res.json(resultado[0]);
-		} else if (resultado.length == 0) {
-			res.status(403).send('Login e/ou senha inválido(s)');
-		} else {
-			res.status(403).send('Mais de um usuário com o mesmo login e senha!');
-		}
-
-	}).catch(erro => {
-		console.error(erro);
-		res.status(500).send(erro.message);
-  	});
-});
-
+		banco.conectar().then(() => {
+			console.log(`Chegou p/ login: ${JSON.stringify(req.body)}`);	
+			return banco.sql.query(`SELECT * FROM CONTRATANTE where email = '${login}' and senha='${senha}'`);
+		}).then((consulta) => {
+			console.log(consulta.recordset);
+			if (consulta.recordset.length == 1) {
+				res.send(consulta.recordset[0]);
+			} else {
+				res.sendStatus(404);
+				console.log("ERRO AQUI OLHAAAAA")
+			}
+		}).catch(err => {
+			console.log(err);
+		}).finally(() => {
+			banco.sql.close();
+		})
+	});	
 
 router.post('/cadastrar', (req, res, next) => {
 
