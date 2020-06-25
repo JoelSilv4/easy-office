@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var sequelize = require('../models').sequelize;
+//var sequelize = require('../models').sequelize;
 // var Usuario = require('../models').Usuario;
 var banco = require('../app-banco');
 
