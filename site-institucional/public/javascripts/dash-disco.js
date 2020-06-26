@@ -1,5 +1,4 @@
 // Essa variavel é necessaria para transformar o canvas num objeto
-    // Estou pegando o elemento atraves da classe por isso o get
     var ctx = document.getElementsByClassName("grafico-disco");
     // setando a configuração dele
     var chartGraph = new Chart (ctx,{

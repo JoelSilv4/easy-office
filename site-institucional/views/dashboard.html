@@ -60,7 +60,7 @@
 
             </section>
 
-            <section>
+            <!-- <section>
 
                     <div class="container-alertas">
 
@@ -140,44 +140,134 @@
 
                         </div>
 
-            </section>
+            </section> -->
 
             <section>
 
                 <div class="container-info-dispositivo">
 
-                    <div class="dispositivo">
-                        <img class="img-icon-computer" src="../images/icon-computer.png" alt="">
-                        <h1>Dispositivo</h1>
+                    <div>
+                        <div class="dispositivo">
+                            <img class="img-icon-computer" src="../images/icon-computer.png" alt="">
+                            <h1>Dispositivo</h1>
+                        </div>
+    
+                        <div class="dados-dispositivo">
+    
+                            <div class="div-nome">
+                                <h2>Sistema Operacional:</h2>
+                                <p>Microsoft Windows 10</p>
+                            </div>
+    
+                            <div class="div-nome">
+                                <h2>Processador:</h2>
+                                <p>Intel Core i7-6600U CPU @2.60GHz</p>
+                            </div>
+                
+                            <div class="div-nome">
+                                <h2>RAM:</h2>
+                                <p>8,00 GB</p>
+                            </div>
+                
+                            <div class="div-nome">
+                                <h2>HD:</h2>
+                                <p>1 TB</p>
+                            </div>
                     </div>
 
-                    <div class="dados-dispositivo">
-
-                        <div class="div-nome">
-                            <h2>Sistema Operacional:</h2>
-                            <p>Microsoft Windows 10</p>
-                        </div>
-
-                        <div class="div-nome">
-                            <h2>Processador:</h2>
-                            <p>Intel Core i7-6600U CPU @2.60GHz</p>
-                        </div>
-            
-                        <div class="div-nome">
-                            <h2>RAM:</h2>
-                            <p>8,00 GB</p>
-                        </div>
-            
-                        <div class="div-nome">
-                            <h2>HD:</h2>
-                            <p>1 TB</p>
-                        </div>
-
-                        <div class="barra-horizontal">
+                        <!-- <div class="barra-horizontal">
                                 <canvas id="barraHorizontal"></canvas>
                                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                                 <script src="../javascripts/dash-barra.js"></script>
-                        </div>
+                        </div> -->
+
+                        <div class="container-alertas">
+
+                        
+                            <div class="div-alerta">
+
+                                    <div class="icon-alerta">
+                                        <img src="../images/cpu.png" alt="">
+                                    </div>
+    
+                                <a href="historico.html">
+                                    <div class="info-alerta">
+    
+                                    <div class="info-processo">
+                                        <h2>CPU</h2>
+                                        <p>84.2%</p>
+                                    </div>
+    
+                                    <hr>
+    
+                                    <div class="info-msg">
+                                        <div>
+                                            <img src="../images/alert.png" alt="">
+                                        </div>
+
+                                        <div>
+                                            <p>Alto nível de processamento!</p>
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </a>
+    
+                                </div>
+
+                        <div class="div-alerta">
+
+                                <div class="icon-alerta">
+                                    <img src="../images/hard-disk-drive.png" alt="">
+                                </div>
+
+                            <a href="historico.html">
+                                <div class="info-alerta">
+
+                                <div class="info-processo">
+                                    <h2>Disco</h2>
+                                    <p>12.5%</p>
+                                </div>
+
+                                <hr>
+                                    
+                                </div>
+                            </a>
+
+                            </div>
+
+                            <div class="div-alerta">
+
+                                    <div class="icon-alerta">
+                                        <img src="../images/ram.png" alt="">
+                                    </div>
+    
+                                <a href="historico.html">
+                                    <div class="info-alerta">
+    
+                                    <div class="info-processo">
+                                        <h2>Memória</h2>
+                                        <p>92.8%</p>
+                                    </div>
+    
+                                    <hr>
+    
+                                    <div class="info-msg">
+                                        <div>
+                                            <img src="../images/alert.png" alt="">
+                                        </div>
+
+                                        <div>
+                                            <p>Memória quase cheia!</p>
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </a>
+    
+                                </div>
+
+                    </div>
 
                     </div>
 
@@ -186,6 +276,45 @@
             </section>
 
             <section>
+
+                <div class="container-info-dispositivo">
+
+                        <div class="dispositivo">
+                            <img class="img-icon-computer" src="../images/task.png" alt="">
+                            <h1>Tarefas</h1>
+                        </div>
+                
+                <div class="container-tarefas">
+
+                        <div class="chart-tarefas">
+                            <canvas id="chart-tarefas"></canvas>
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                            <script src="../javascripts/tarefas-dash.js"></script>
+                        </div>
+
+                        <div class="container-alertas-tarefas">
+
+                            <div class="alertas-tarefas">
+                                <div class="circulo-tarefas" style="background-color: #009E23;"></div>
+                                <p>Concluído</p> 
+                            </div>
+
+                            <div class="alertas-tarefas">
+                                <div class="circulo-tarefas" style="background-color: #0085FF;"></div>
+                                <p>Em andamento</p> 
+                            </div>
+
+                            <div class="alertas-tarefas">
+                                <div class="circulo-tarefas" style="background-color: #FF0505;"></div>
+                                <p>Atrasado</p> 
+                            </div>
+
+                        </div>
+                </div>
+
+            </section>
+
+            <!-- <section>
 
                 <div class="container-graficos">
 
@@ -266,7 +395,7 @@
 
                 </div>
 
-            </section>
+            </section> -->
 
         </main>
 
@@ -283,7 +412,7 @@
             + '&ref=' + encodeURIComponent(document.URL);
             document.body.appendChild(ttChatLoaderS);
             //]]>
-            </script>
+        </script>
             
             
     

@@ -66,6 +66,7 @@
   display: flex;
   margin: 0 80px 0 80px;
   padding-top: 30px;
+  padding-bottom: 5px;
   border-bottom: solid 1px black;
 }
 
@@ -73,7 +74,7 @@
   font-size: 28px;
   margin-left: 20px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin: 10px 0 0 15px;
 }
 
 .dispositivo img {
@@ -94,10 +95,9 @@
   font-size: 20px;
 }
 
-.barra-horizontal {
-  width: 800px;
-  margin:  0 0 0 80px;
-  padding-bottom: 30px;
+.chart-tarefas {
+  width: 600px;
+  padding: 20px 0 40px 0;
 }
 
 /* sessão alertas */
@@ -109,7 +109,7 @@
 
 .container-alertas {
   display: flex;
-  margin: 0 0 0 25px;
+  justify-content: space-between;
 }
 
 .container-alertas hr {
@@ -123,7 +123,7 @@
   height: 93px;
   display: flex;
   justify-content: center;
-  margin: 50px 0 0 100px;
+  margin: 50px 0 0 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   position: relative;
 }
@@ -134,10 +134,10 @@
 }
 
 .info-alerta {
-  background-color: white;
-  width: 300px;
+  background-color: #F5F5F5;
+  width: 340px;
   height: 170px;
-  margin: -40px 0 0 70px;
+  margin: -40px auto;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -164,7 +164,12 @@
 }
 
 .info-msg p {
-  margin: 10px 0 0 7px;
+  margin: 5px 0 0 8px;
+}
+
+.div-alerta {
+  margin: 0 0 80px 0;
+  padding: 0 60px 0 25px;
 }
 
 /* sessão de gráficos pequenos */
@@ -217,3 +222,24 @@
   margin: 5px 0 0 10px;
 }
 
+/* sessão tarefas */
+
+.container-tarefas {
+  display: flex;
+}
+
+.alertas-tarefas {
+  display: flex;
+  margin: 70px;
+}
+
+.alertas-tarefas p {
+  margin: 5px 0 0 10px;
+  font-weight: bold;
+}
+
+.circulo-tarefas {
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+}
