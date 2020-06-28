@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const port = 3000;
 const sql = require('mssql');
 const connStr = "Server=svreasyoffice.database.windows.net;Database=bdEasyOffice;User Id=EasyAdm;Password=#Gfgrupo2;encrypt=true;";
+var andamento = [];
 
 sql.connect(connStr)
     .then(conn => global.conn = conn)
@@ -28,4 +29,20 @@ function execSQLQuery(sqlQry, res){
 
 router.get('/clientes', (req, res) => {
     execSQLQuery('SELECT * FROM CONTRATANTE', res);
+})
+
+router.get('/tarefas',(req,res) => {
+    execSQLQuery('SELECT emAndamento FROM STATUS_ATIVIDADE',res);
+    
+    sequelize.query(instrucaoSql, {
+		model: Leitura,
+		mapToModel: true
+	})
+		.then(resultado => {
+			console.log(`Encontrados: ${resultado.length}`);
+			res.json(resultado);
+		}).catch(erro => {
+			console.error(erro);
+			res.status(500).send(erro.message);
+		});
 })

@@ -9,28 +9,27 @@ module.exports = (sequelize, DataTypes) => {
     let Leitura = sequelize.define('Leitura',{	
 		id: {
 			type: DataTypes.INTEGER,
-			primaryKey: true,
-			autoIncrement: true
+			primaryKey: false,
+			autoIncrement: false
 		},	
-		temperatura: {
-			type: DataTypes.REAL,
+		emAndamento: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		umidade: {
-			type: DataTypes.REAL,
+		concluida: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		momento: {
-			type: DataTypes.DATE,
+		atrasada: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		momento_grafico: {
-			type: DataTypes.VIRTUAL, // campo 'falso' (não existe na tabela). Deverá ser preenchido 'manualmente' no select
-			allowNull: true
+		fkEmpresa: {
+			type: DataTypes.STRING, 
 		}
 	}, 
 	{
-		tableName: 'leitura', 
+		tableName: 'STATUS_ATIVIDADE', 
 		freezeTableName: true, 
 		underscored: true,
 		timestamps: false,

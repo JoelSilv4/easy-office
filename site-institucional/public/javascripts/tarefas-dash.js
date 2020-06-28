@@ -3,6 +3,7 @@ var ctx = document.getElementById('chart-tarefas').getContext('2d');
 // And for a doughnut chart
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
+    
     data: {
         labels: ["Concluído","Em andamento","Atrasado"],
         datasets: [{
