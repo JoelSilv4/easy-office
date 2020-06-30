@@ -62,7 +62,15 @@ function obterDadosGrafico() {
                     // dos atributos que vem no JSON 
                     // que gerou na consulta ao banco de dados
 
-                    dados.datasets[0].data.push(registro.emAndamento,registro.concluida,registro.atrasada);
+                    dados.labels.push(registro.STATUS_ATIVIDADE);
+                    
+                    andamento = registro.emAndamento;
+                    concluido = registro.concluida;
+                    atrasado = registro.atrasada;
+
+                    dados.datasets[0].data.push(registro.emAndamento);
+                    dados.datasets[1].data.push(registro.concluida);
+                    dados.datasets[2].data.push(registro.atrasada);
 
                 }
                 console.log(JSON.stringify(dados));

@@ -14,9 +14,9 @@ router.post('/autenticar', function(req, res, next) {
 
 	var login = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
-
+		
 		banco.conectar().then(() => {
-			console.log(`Chegou p/ login: ${JSON.stringify(req.body)}`);	
+			console.log(`Chegou p/ login: ${JSON.stringify(req.body)}`);
 			return banco.sql.query(`SELECT * FROM CONTRATANTE where email = '${login}' and senha='${senha}'`);
 		}).then((consulta) => {
 			console.log(consulta.recordset);

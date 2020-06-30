@@ -51,7 +51,7 @@
 
                 <div class="funcionario">
                     <img src="../images/user.png" alt="">
-                    <h1>Chefe: Nome</h1>
+                    <h1>Chefe: <span id="nome_chefe">--</span> </h1>
     
                 </div>
     
@@ -60,7 +60,7 @@
             <section>
 
                 <div class="msg-total">
-                    <p><strong>Com base na porcentagem de uso do hardware, 9 máquinas de funcionários
+                    <p><strong>Com base na porcentagem de uso do hardware, <span id="uso_hardware"></span> máquinas de funcionários
                             estão prestes a atingir o limite máximo!</strong> 
                     </p>
                 </div>
@@ -176,9 +176,6 @@
                             </div>
 
                 </div>
-
-                <button onclick="teste()">AAAAAAAAAAA</button>
-
             </section>
 
         </main>
@@ -226,6 +223,34 @@
 
 <script>
 
+window.onload = teste;
+
+function atualizaAlerta() {
+    fetch("/tarefas/cpu", {
+                        method: 'GET'
+                    }).then((response) => {
+                        console.log(response);
+                        if (response.ok) {
+                            response.json().then(function(resposta) {
+                                contador = 0
+                                index = 0
+                                resposta.map( item => {
+                                 index++
+                                if (resposta[index].usoCpu > 70) {
+                                contador++
+                                 uso_hardware.innerText = `${contador}`
+                                 } else {
+                                    uso_hardware.innerText = `${contador}`
+                                 }
+                                }) 
+
+                               
+                            })
+                        } else {
+                            console.log("Algo deu errado!")
+                        }
+                    })
+ }               
 
 function teste() {
                     fetch("/tarefas/teste", {
@@ -234,14 +259,14 @@ function teste() {
                         console.log(response);
                         if (response.ok) {
                             response.json().then(function(resposta) {
-                                console.log("oiii")
+                                nome_chefe.innerText = `${resposta[0].nome}`
+                                atualizaAlerta()
                             })
                         } else {
                             console.log("Algo deu errado!")
                         }
                     })
                 }
-
 </script>
 
 </html>
