@@ -1,4 +1,4 @@
-var ctx = document.getElementById('chart-tarefas').getContext('2d');
+var ctx = document.getElementById('chart_tarefas').getContext('2d');
 
 // And for a doughnut chart
 var myDoughnutChart = new Chart(ctx, {

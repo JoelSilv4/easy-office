@@ -177,6 +177,8 @@
 
                 </div>
 
+                <button onclick="teste()">AAAAAAAAAAA</button>
+
             </section>
 
         </main>
@@ -221,4 +223,25 @@
     </div>
     
 </body>
+
+<script>
+
+
+function teste() {
+                    fetch("/tarefas/teste", {
+                        method: 'GET'
+                    }).then((response) => {
+                        console.log(response);
+                        if (response.ok) {
+                            response.json().then(function(resposta) {
+                                console.log("oiii")
+                            })
+                        } else {
+                            console.log("Algo deu errado!")
+                        }
+                    })
+                }
+
+</script>
+
 </html>

@@ -17,7 +17,7 @@ function configurarGrafico() {
         stacked: false,
         scales: {
             yAxes: [{
-                type: 'doughnut', 
+                type: string, 
                 display: true,
                 ticks: {
                     beginAtZero: false
@@ -37,11 +37,11 @@ function obterDadosGrafico() {
     // neste JSON tem que ser 'labels', 'datasets' etc, 
     // porque é o padrão do Chart.js
     var dados = {
-        labels: [],
+        labels: ["Concluído","Em andamento","Atrasado"],
         datasets: [
             {
-                label: ["Concluído","Em andamento","Atrasado"],
-                fill: false,
+                label: [],
+                fill: true,
                 data: []
             }
         ]
