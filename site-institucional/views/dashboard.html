@@ -119,7 +119,7 @@
 
                                         <div class="info-processo">
                                             <h2>CPU</h2>
-                                            <p><span id="cpu_atual">--</span> em uso</p>
+                                            <p><span id="cpu_atual">--</span> % em uso</p>
                                         </div>
 
                                         <hr>
@@ -292,8 +292,6 @@ function atualizaGraficoTrello() {
     }).then((response) => {
         if (response.ok) {
             response.json().then(function (resposta) {
-
-                debugger
                 let tarefaAndamento = 0
                 let tarefaConcluida = 0
                 let tarefaAtrasada = 0
@@ -367,8 +365,9 @@ function atualizaGraficoTrello() {
             if (response.ok) {
                 trello()
                 response.json().then(function (resposta) {
-                    hd_funcionario.innerText = resposta[0].totalDisco
-                    disco_atual.innerText = resposta[0].discoDisponivel
+                    let tamanhoArr = resposta.length
+                    hd_funcionario.innerText = resposta[tamanhoArr-1].totalDisco
+                    disco_atual.innerText = resposta[tamanhoArr-1].discoDisponivel
                 })
             } else {
                 console.log("Algo deu errado!")
@@ -384,8 +383,9 @@ function atualizaGraficoTrello() {
             if (response.ok) {
                 hd()
                 response.json().then(function (resposta) {
-                    ram_funcionario.innerText = resposta[0].totalRam
-                    ram_atual.innerText = resposta[0].dispRam
+                    let tamanhoArr = resposta.length
+                    ram_funcionario.innerText = resposta[tamanhoArr-1].totalRam
+                    ram_atual.innerText = resposta[tamanhoArr-1].dispRam
                 })
             } else {
                 console.log("Algo deu errado!")
@@ -401,8 +401,9 @@ function atualizaGraficoTrello() {
             ram()
             if (response.ok) {
                 response.json().then(function (resposta) {
-                    processador_funcionario.innerText = resposta[0].nomeCpu
-                    cpu_atual.innerText = resposta[0].usoCpu
+                    let tamanhoArr = resposta.length
+                    processador_funcionario.innerText = resposta[tamanhoArr-1].nomeCpu
+                    cpu_atual.innerText = resposta[tamanhoArr-1].usoCpu
                 })
             } else {
                 console.log("Algo deu errado!")
@@ -418,7 +419,8 @@ function atualizaGraficoTrello() {
             if (response.ok) {
                 cpu()
                 response.json().then(function (resposta) {
-                    so_funcionario.innerText = `${resposta[0].soNome}`
+                    let tamanhoArr = resposta.length
+                    so_funcionario.innerText = `${resposta[tamanhoArr-1].soNome}`
                 })
             } else {
                 console.log("Algo deu errado!")
