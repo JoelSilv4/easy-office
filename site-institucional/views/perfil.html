@@ -266,7 +266,7 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     let contador = 0
-                    pegaNomeEmpresa()
+                    atualizaDisco()
                     for (let index = 0; index < resposta.length; index++) {
                         if (resposta[index].usoCpu > 60) {
                             contador++
@@ -326,22 +326,6 @@
         });
     }
 
-    function pegaNomeEmpresa() {
-        fetch("/tarefas/empresa", {
-            method: 'GET'
-        }).then((response) => {
-            console.log(response);
-            atualizaDisco()
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    nome_empresa.innerText = resposta[0].nomeEmpresa
-                })
-            } else {
-                console.log("Algo deu errado!")
-            }
-        });
-    }
-
     function teste() {
         fetch("/tarefas/teste", {
             method: 'GET'
@@ -349,6 +333,7 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     nome_chefe.innerText = `${resposta[0].nome}`
+                    nome_empresa.innerText = resposta[0].nomeEmpresa
                     atualizaAlerta()
                 })
             } else {

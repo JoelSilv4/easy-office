@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,102 +14,104 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <script src="../javascripts/calcule.js"></script>
 </head>
+
 <body>
 
-        <header class="header">
+    <header class="header">
 
-                <div class="container-width-nav">
-        
-                    <img src="../images/logo .png" alt="logo">
-                    <nav>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="sobre">Sobre</a></li>
-                            <li><a href="calcule">Calcule</a></li>
-                            <li><a href="cadastro">Contrate</a></li>
-                        </ul>
-                    </nav>
+        <div class="container-width-nav">
+
+            <img src="../images/logo .png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="sobre">Sobre</a></li>
+                    <li><a href="calcule">Calcule</a></li>
+                    <li><a href="cadastro">Contrate</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section>
+            <div class="container-relatorios">
+
+                <div class="title-relatorios">
+                    <h2>Simule os seus gastos!</h2>
+                    <p>Nosso sistema monitora o hardware de uma máquina, especificamente a CPU, o Disco e a Memória.
+                        Calcule aqui o quanto será cobrado pelo nosso serviço!
+                    </p>
                 </div>
-        
-            </header>
 
-            <main>
+                <img class="img-mulher" src="../images/computador-simulador.png" alt="">
+            </div>
+        </section>
 
-                    <section>
-                            <div class="container-relatorios">
-            
-                                    <div class="title-relatorios">
-                                        <h2>Simule os seus gastos!</h2>
-                                        <p>Nosso sistema monitora o hardware de uma máquina, especificamente a CPU, o Disco e a Memória.
-                                            Calcule aqui o quanto será cobrado pelo nosso serviço!
-                                        </p>
-                                    </div>
-        
-                                    <img class="img-mulher" src="../images/computador-simulador.png" alt="">
-                                </div>
-                    </section>
+        <section class="section-relatorios">
+            <div class="container-relatorios">
+                <img class="img-calculadora" src="../images/calculadora.png" alt="">
 
-                    <section class="section-relatorios">
-                            <div class="container-relatorios">
-                                    <img class="img-calculadora" src="../images/calculadora.png" alt="">
-            
-                                    <div class="title-relatorios">
-                                        <h2>Calcule aqui!</h2>
-                                        
-                                        <p class="p-calcule">Quantas máquinas você deseja monitorar?
-                                        </p>
+                <div class="title-relatorios">
+                    <h2>Calcule aqui!</h2>
 
-                                        <input class="input-calcule" type="number" id="maquinas">
+                    <p class="p-calcule">Quantas máquinas você deseja monitorar?
+                    </p>
 
-                                        <button class="btn-calcule" onclick="calcular()">Calcular!</button>
+                    <input class="input-calcule" type="number" id="maquinas">
 
-                                        <div class="div-simulador" id="div_simulador"></div>
-                                    </div>
+                    <button class="btn-calcule" onclick="calcular()">Calcular!</button>
 
-                                    </div>
-                                </div>
-                    </section>
+                    <div class="div-simulador" id="div_simulador"></div>
+                </div>
 
-            </main>
+            </div>
+            </div>
+        </section>
 
-            <script type="text/javascript">
-                // <![CDATA[
-                var ttChatLoaderS = document.createElement('script');
-                document.tomticketChatLoaderScriptVersion = 2;
-                ttChatLoaderS.src = 'https://easyoffice.tomticket.com/scripts-chat/chat.min.js'
-                + '?id=EP46884'
-                + '&autoOpen=0'
-                + '&hideWhenOffline=0'
-                + '&d=easyoffice'
-                + '&ts=' + new Date().getTime()
-                + '&ref=' + encodeURIComponent(document.URL);
-                document.body.appendChild(ttChatLoaderS);
+    </main>
+
+    <script type="text/javascript">
+        // <![CDATA[
+        var ttChatLoaderS = document.createElement('script');
+        document.tomticketChatLoaderScriptVersion = 2;
+        ttChatLoaderS.src = 'https://easyoffice.tomticket.com/scripts-chat/chat.min.js'
+            + '?id=EP46884'
+            + '&autoOpen=0'
+            + '&hideWhenOffline=0'
+            + '&d=easyoffice'
+            + '&ts=' + new Date().getTime()
+            + '&ref=' + encodeURIComponent(document.URL);
+        document.body.appendChild(ttChatLoaderS);
                 //]]>
-                </script>
-                
-                
+    </script>
 
-            <footer>
-                <div class="container-footer">
-                    <img src="../images/logo .png" alt="">
-        
-                    <div class="container-contato">
-        
-                    <div class="contato-footer">
-                        <h5>Contato</h5>
-                        <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
-                    </div>
-        
-                    <div class="social-footer">
-                        <img src="../images/facebook.png" alt="">
-                        <img src="../images/instagram.png" alt="">
-                        <img src="../images/youtube.png" alt="">
-                    </div>
-                    
-                </div>
-                </div>
-            </footer>
 
-            
+
+    <footer>
+        <div class="container-footer">
+            <img src="../images/logo .png" alt="">
+
+            <div class="container-contato">
+
+                <div class="contato-footer">
+                    <h5>Contato</h5>
+                    <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
+                </div>
+
+                <div class="social-footer">
+                    <img src="../images/facebook.png" alt="">
+                    <img src="../images/instagram.png" alt="">
+                    <img src="../images/youtube.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>

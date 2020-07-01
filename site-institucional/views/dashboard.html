@@ -284,61 +284,61 @@
 
 <script>
 
-window.onload = dadosFuncionario;
+    window.onload = dadosFuncionario;
 
-function atualizaGraficoTrello() {
-    fetch("/tarefas/trello", {
-        method: 'GET'
-    }).then((response) => {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                let tarefaAndamento = 0
-                let tarefaConcluida = 0
-                let tarefaAtrasada = 0
+    function atualizaGraficoTrello() {
+        fetch("/tarefas/trello", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    let tarefaAndamento = 0
+                    let tarefaConcluida = 0
+                    let tarefaAtrasada = 0
 
-                tarefaAndamento = resposta[0].emAndamento
-                tarefaConcluida =  resposta[0].concluido
-                tarefaAtrasada = resposta[0].atrasada
+                    tarefaAndamento = resposta[0].emAndamento
+                    tarefaConcluida = resposta[0].concluido
+                    tarefaAtrasada = resposta[0].atrasada
 
-                var ctx = document.getElementById('chart_tarefas').getContext('2d');
+                    var ctx = document.getElementById('chart_tarefas').getContext('2d');
 
-                // And for a doughnut chart
-                var myDoughnutChart = new Chart(ctx, {
-                    type: 'doughnut',
-                
-                    data: {
-                        labels: ["Concluído", "Em andamento", "Atrasado"],
-                        datasets: [{
-                            backgroundColor: ["#009E23", "#0085FF", "#FF0505"],
-                            data: [tarefaConcluida, tarefaAndamento, tarefaAtrasada],
-                            borderWidth: 7
-                        }],
-                    },
-                
-                    options: {
-                        cutoutPercentage: 80,
-                        legend: {
-                            display: false
+                    // And for a doughnut chart
+                    var myDoughnutChart = new Chart(ctx, {
+                        type: 'doughnut',
+
+                        data: {
+                            labels: ["Concluído", "Em andamento", "Atrasado"],
+                            datasets: [{
+                                backgroundColor: ["#009E23", "#0085FF", "#FF0505"],
+                                data: [tarefaConcluida, tarefaAndamento, tarefaAtrasada],
+                                borderWidth: 7
+                            }],
+                        },
+
+                        options: {
+                            cutoutPercentage: 80,
+                            legend: {
+                                display: false
+                            }
                         }
-                    }
-                });
-                console.log(tarefaAndamento, tarefaConcluida, tarefaAtrasada)
+                    });
+                    console.log(tarefaAndamento, tarefaConcluida, tarefaAtrasada)
 
-                // data.datasets[0].data.push(resposta.emAndamento);
-                // data.datasets[1].data.push(resposta.concluida);
-                // data.datasets[2].data.push(resposta.atrasada);
+                    // data.datasets[0].data.push(resposta.emAndamento);
+                    // data.datasets[1].data.push(resposta.concluida);
+                    // data.datasets[2].data.push(resposta.atrasada);
 
-            // data.push(registro.emAndamento);
-            // data.push(registro.concluida);
-            // data.push(registro.atrasada);
+                    // data.push(registro.emAndamento);
+                    // data.push(registro.concluida);
+                    // data.push(registro.atrasada);
 
-            })
-        } else {
-            console.log("Algo deu errado!")
-        }
-    });
-    // setTimeout(hd, 5000);
-}
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+        // setTimeout(hd, 5000);
+    }
 
     function trello() {
         fetch("/tarefas/trello", {
@@ -366,8 +366,8 @@ function atualizaGraficoTrello() {
                 trello()
                 response.json().then(function (resposta) {
                     let tamanhoArr = resposta.length
-                    hd_funcionario.innerText = resposta[tamanhoArr-1].totalDisco
-                    disco_atual.innerText = resposta[tamanhoArr-1].discoDisponivel
+                    hd_funcionario.innerText = resposta[tamanhoArr - 1].totalDisco
+                    disco_atual.innerText = resposta[tamanhoArr - 1].discoDisponivel
                 })
             } else {
                 console.log("Algo deu errado!")
@@ -384,8 +384,8 @@ function atualizaGraficoTrello() {
                 hd()
                 response.json().then(function (resposta) {
                     let tamanhoArr = resposta.length
-                    ram_funcionario.innerText = resposta[tamanhoArr-1].totalRam
-                    ram_atual.innerText = resposta[tamanhoArr-1].dispRam
+                    ram_funcionario.innerText = resposta[tamanhoArr - 1].totalRam
+                    ram_atual.innerText = resposta[tamanhoArr - 1].dispRam
                 })
             } else {
                 console.log("Algo deu errado!")
@@ -402,14 +402,14 @@ function atualizaGraficoTrello() {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     let tamanhoArr = resposta.length
-                    processador_funcionario.innerText = resposta[tamanhoArr-1].nomeCpu
-                    cpu_atual.innerText = resposta[tamanhoArr-1].usoCpu
+                    processador_funcionario.innerText = resposta[tamanhoArr - 1].nomeCpu
+                    cpu_atual.innerText = resposta[tamanhoArr - 1].usoCpu
                 })
             } else {
                 console.log("Algo deu errado!")
             }
         });
-         setTimeout(cpu, 5000);
+        setTimeout(cpu, 5000);
     }
 
     function so() {
@@ -420,7 +420,7 @@ function atualizaGraficoTrello() {
                 cpu()
                 response.json().then(function (resposta) {
                     let tamanhoArr = resposta.length
-                    so_funcionario.innerText = `${resposta[tamanhoArr-1].soNome}`
+                    so_funcionario.innerText = `${resposta[tamanhoArr - 1].soNome}`
                 })
             } else {
                 console.log("Algo deu errado!")
@@ -445,7 +445,7 @@ function atualizaGraficoTrello() {
         })
         // setTimeout(atualizar, 5000);
     }
-    
+
 
 </script>
 

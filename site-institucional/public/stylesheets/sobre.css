@@ -33,7 +33,7 @@
 @media (max-width: 425px) {
     .container-relatorios {
         display: block;
-        max-width: 380px;
+        max-width: 300px;
         margin: 10px auto;
     }
 
@@ -50,7 +50,7 @@
 @media (max-width: 768px) and (min-width: 426px) {
     .container-relatorios {
         display: block;
-        max-width: 680px;
+        max-width: 300px;
         margin: 10px auto;
     }
 

@@ -70,23 +70,6 @@ router.get('/ram', function (req, res, next) {
     });
 });
 
-router.get('/empresa', function (req, res, next) {
-
-    banco.conectar().then(() => {
-        let login = req.params.email;
-        console.log("consultando")
-        return banco.sql.query(`select nomeEmpresa from CONTRATANTE where email = 'lucasteste@email.com'`);
-    }).then((consulta) => {
-        console.log('>>>>>', consulta)
-        console.log(consulta.recordset)
-        res.send(consulta.recordset);
-    }).catch(err => {
-        console.log(err);
-    }).finally(() => {
-        banco.sql.close();
-    });
-});
-
 router.get('/funcionario', function (req, res, next) {
 
     banco.conectar().then(() => {
