@@ -1,7 +1,7 @@
 /* sessão relatórios */
 
 .section-relatorios {
-    background-color: #C3D7F0;
+    background-color: #037EC5;
 }
 .container-relatorios {
     display: flex;
@@ -16,6 +16,7 @@
 
 .img-dash {
     z-index: -1;
+    margin: 60px auto;
 }
 
 .title-relatorios h2 {
@@ -28,6 +29,21 @@
 .title-relatorios p {
     font-size: 20px;  
     line-height: 1.4em;
+    margin: 0 20px 0 0;
+}
+
+.p-branco {
+    color: white;
+}
+
+.btn-saiba {
+    height: 25px;
+    margin: 10px 0 10px 0;
+    color: white;
+    background-color: #4048DB;
+    border-radius: 5px;
+    font-family: Montserrat;
+    outline: 0;
 }
 
 @media (max-width: 425px) {
