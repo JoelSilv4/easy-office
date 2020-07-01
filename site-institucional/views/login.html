@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <title>Login</title>
 </head>
+
 <body>
-    
+
     <div class="fundo cx_login">
 
         <form id="form_login" method="post" onsubmit="return entrar()">
-            
+
             <div id="cx_form">
 
                 <div class="titulo titulo-login">
@@ -20,32 +22,37 @@
                     <img src="../images/logo.png" alt="" class="img" width="70px">
                 </div>
 
-                
-                
-                <div class="cx_input"><p>E-mail</p> <input type="email" id="email" name="email" required value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></div>
-                <div class="cx_input"><p>Senha </p><input type="password" id="senha" name="senha" required value=""></div>
-                
+
+
+                <div class="cx_input">
+                    <p>E-mail</p> <input type="email" id="email" name="email" required value=""
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                </div>
+                <div class="cx_input">
+                    <p>Senha </p><input type="password" id="senha" name="senha" required value="">
+                </div>
+
                 <button id="btn_entrar">Enviar</button>
 
                 <div id="info">
                     <div id="carregar" style="display: none;">
-                        <img src="../images/carregando.gif"id="img_aguarde"  width="50px">
+                        <img src="../images/carregando.gif" id="img_aguarde" width="50px">
                         <p>Processando</p>
                     </div>
-                    <p id="div_erro"style="display: none;">
+                    <p id="div_erro" style="display: none;">
                         Erro no cadastro
                     </p>
                 </div>
 
                 <a href="cadastro">Não tem cadastro? Clique aqui</a>
 
-                
 
-            </div>  
-        </form> 
-    </div>   
 
-    
+            </div>
+        </form>
+    </div>
+
+
 
 </body>
 
@@ -53,28 +60,28 @@
 
 <script>
 
-function entrar() {
-            aguardar();
-            var formulario = new URLSearchParams(new FormData(form_login));
-            fetch("/usuarios/autenticar", {
-                method: "POST",
-                body: formulario
-            }).then(function (response) {
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
 
-                if (response.ok) {
-                    response.json().then(function (resposta) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
                     sessionStorage.usuario = resposta.nome;
                     window.location.href = 'perfil';
-                    });
-                } else {
-                    console.log('Erro de login!');
-                    div_msg.innerHTML = 'Usuário e/ ou senha incorretos!'
-                    finalizar_aguardar();
-                }
-            }); 
-            return false;
-        }
-        
+                });
+            } else {
+                console.log('Erro de login!');
+                div_msg.innerHTML = 'Usuário e/ ou senha incorretos!'
+                finalizar_aguardar();
+            }
+        });
+        return false;
+    }
+
     function aguardar() {
         btn_entrar.disabled = true;
         carregar.style.display = 'block';
@@ -83,7 +90,7 @@ function entrar() {
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
-        carregar.style.display= 'none';
+        carregar.style.display = 'none';
         div_erro.style.display = 'block';
         div_erro.innerHTML = resposta;
     }

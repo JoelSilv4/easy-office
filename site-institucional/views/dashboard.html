@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +13,37 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <title>Dashboard</title>
 </head>
+
 <body>
 
     <div class="sidenav">
-    <nav>
-        <div class="div-logo">
-            <img class="img-logo" src="../images/logo .png" alt="">
-        </div>
+        <nav>
+            <div class="div-logo">
+                <img class="img-logo" src="../images/logo .png" alt="">
+            </div>
 
-        <hr>
+            <hr>
 
-        <div class="div-menu">
-            <ul>
-                <a href="perfil"><li>Perfil</li></a>
-                <a href="funcionarios"><li class="active">Funcionários</li></a>
-                <a href="historico"><li>Histórico</li></a>
-                <a href="funcionarios"><li>Voltar</li></a>
-                <a href="/"><li>Sair</li></a>
-            </ul>
-        </div>
-    </nav>
+            <div class="div-menu">
+                <ul>
+                    <a href="perfil">
+                        <li>Perfil</li>
+                    </a>
+                    <a href="funcionarios">
+                        <li class="active">Funcionários</li>
+                    </a>
+                    <a href="historico">
+                        <li>Histórico</li>
+                    </a>
+                    <a href="funcionarios">
+                        <li>Voltar</li>
+                    </a>
+                    <a href="/">
+                        <li>Sair</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <div class="conteudo-principal">
@@ -48,14 +60,14 @@
                 <div class="dados-funcionario">
                     <div class="div-nome">
                         <h2>Nome:</h2>
-                        <p>Gustavo Lins</p>
+                        <p><span id="nome_funcionario">--</span></p>
                     </div>
-                    
+
                     <div class="div-registro">
                         <h2>Registro do Funcionário:</h2>
-                        <p>1121454</p>
+                        <p><span id="registro_funcionario">--</span></p>
                     </div>
-                    
+
                 </div>
 
             </section>
@@ -69,117 +81,117 @@
                             <img class="img-icon-computer" src="../images/icon-computer.png" alt="">
                             <h1>Dispositivo</h1>
                         </div>
-    
+
                         <div class="dados-dispositivo">
-    
+
                             <div class="div-nome">
                                 <h2>Sistema Operacional:</h2>
-                                <p>Microsoft Windows 10</p>
+                                <p><span id="so_funcionario">--</span></p>
                             </div>
-    
+
                             <div class="div-nome">
                                 <h2>Processador:</h2>
-                                <p>Intel Core i7-6600U CPU @2.60GHz</p>
+                                <p><span id="processador_funcionario">--</span></p>
                             </div>
-                
+
                             <div class="div-nome">
                                 <h2>RAM:</h2>
-                                <p>8,00 GB</p>
+                                <p><span id="ram_funcionario">--</span> GB</p>
                             </div>
-                
+
                             <div class="div-nome">
                                 <h2>HD:</h2>
-                                <p>1 TB</p>
+                                <p><span id="hd_funcionario">--</span> GB</p>
                             </div>
-                    </div>
+                        </div>
 
                         <div class="container-alertas">
 
-                        
+
                             <div class="div-alerta">
 
-                                    <div class="icon-alerta">
-                                        <img src="../images/cpu.png" alt="">
-                                    </div>
-    
-                                <a href="historico.html">
-                                    <div class="info-alerta">
-    
-                                    <div class="info-processo">
-                                        <h2>CPU</h2>
-                                        <p>84.2%</p>
-                                    </div>
-    
-                                    <hr>
-    
-                                    <div class="info-msg">
-                                        <div>
-                                            <img src="../images/alert.png" alt="">
-                                        </div>
-
-                                        <div>
-                                            <p>Alto nível de processamento!</p>
-                                        </div>
-                                    </div>
-                                        
-                                    </div>
-                                </a>
-    
+                                <div class="icon-alerta">
+                                    <img src="../images/cpu.png" alt="">
                                 </div>
 
-                        <div class="div-alerta">
+                                <a href="historico.html">
+                                    <div class="info-alerta">
+
+                                        <div class="info-processo">
+                                            <h2>CPU</h2>
+                                            <p><span id="cpu_atual">--</span> em uso</p>
+                                        </div>
+
+                                        <hr>
+
+                                        <div class="info-msg">
+                                            <div>
+                                                <img src="../images/alert.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <p>Alto nível de processamento!</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <div class="div-alerta">
 
                                 <div class="icon-alerta">
                                     <img src="../images/hard-disk-drive.png" alt="">
                                 </div>
 
-                            <a href="historico.html">
-                                <div class="info-alerta">
+                                <a href="historico.html">
+                                    <div class="info-alerta">
 
-                                <div class="info-processo">
-                                    <h2>Disco</h2>
-                                    <p>12.5%</p>
-                                </div>
+                                        <div class="info-processo">
+                                            <h2>Disco</h2>
+                                            <p><span id="disco_atual">--</span> GB disponíveis</p>
+                                        </div>
 
-                                <hr>
-                                    
-                                </div>
-                            </a>
+                                        <hr>
+
+                                    </div>
+                                </a>
 
                             </div>
 
                             <div class="div-alerta">
 
-                                    <div class="icon-alerta">
-                                        <img src="../images/ram.png" alt="">
-                                    </div>
-    
-                                <a href="historico.html">
-                                    <div class="info-alerta">
-    
-                                    <div class="info-processo">
-                                        <h2>Memória</h2>
-                                        <p>92.8%</p>
-                                    </div>
-    
-                                    <hr>
-    
-                                    <div class="info-msg">
-                                        <div>
-                                            <img src="../images/alert.png" alt="">
-                                        </div>
-
-                                        <div>
-                                            <p>Memória quase cheia!</p>
-                                        </div>
-                                    </div>
-                                        
-                                    </div>
-                                </a>
-    
+                                <div class="icon-alerta">
+                                    <img src="../images/ram.png" alt="">
                                 </div>
 
-                    </div>
+                                <a href="historico.html">
+                                    <div class="info-alerta">
+
+                                        <div class="info-processo">
+                                            <h2>Memória</h2>
+                                            <p><span id="ram_atual">--</span> GB disponíveis</p>
+                                        </div>
+
+                                        <hr>
+
+                                        <div class="info-msg">
+                                            <div>
+                                                <img src="../images/alert.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <p>Memória quase cheia!</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -191,12 +203,12 @@
 
                 <div class="container-info-dispositivo">
 
-                        <div class="dispositivo">
-                            <img class="img-icon-computer" src="../images/task.png" alt="">
-                            <h1>Tarefas</h1>
-                        </div>
-                
-                <div class="container-tarefas">
+                    <div class="dispositivo">
+                        <img class="img-icon-computer" src="../images/task.png" alt="">
+                        <h1>Tarefas</h1>
+                    </div>
+
+                    <div class="container-tarefas">
 
                         <div class="chart-tarefas">
                             <canvas id="chart_tarefas"></canvas>
@@ -209,21 +221,21 @@
 
                             <div class="alertas-tarefas">
                                 <div class="circulo-tarefas" style="background-color: #009E23;"></div>
-                                <p>Concluído: 1</p> 
+                                <p>Concluído: <span id="tarefa_concluida">--</span></p>
                             </div>
 
                             <div class="alertas-tarefas">
                                 <div class="circulo-tarefas" style="background-color: #0085FF;"></div>
-                                <p>Em andamento: 1</p> 
+                                <p>Em andamento: <span id="tarefa_andamento">--</span></p>
                             </div>
 
                             <div class="alertas-tarefas">
                                 <div class="circulo-tarefas" style="background-color: #FF0505;"></div>
-                                <p>Atrasado: 2</p> 
+                                <p>Atrasado: <span id="tarefa_atrasada">--</span></p>
                             </div>
 
                         </div>
-                </div>
+                    </div>
 
             </section>
 
@@ -234,39 +246,205 @@
             var ttChatLoaderS = document.createElement('script');
             document.tomticketChatLoaderScriptVersion = 2;
             ttChatLoaderS.src = 'https://easyoffice.tomticket.com/scripts-chat/chat.min.js'
-            + '?id=EP46884'
-            + '&autoOpen=0'
-            + '&hideWhenOffline=0'
-            + '&d=easyoffice'
-            + '&ts=' + new Date().getTime()
-            + '&ref=' + encodeURIComponent(document.URL);
+                + '?id=EP46884'
+                + '&autoOpen=0'
+                + '&hideWhenOffline=0'
+                + '&d=easyoffice'
+                + '&ts=' + new Date().getTime()
+                + '&ref=' + encodeURIComponent(document.URL);
             document.body.appendChild(ttChatLoaderS);
             //]]>
         </script>
-            
-            
-    
+
+
+
         <footer>
             <div class="container-footer">
                 <img src="../images/logo .png" alt="">
 
                 <div class="container-contato">
 
-                <div class="contato-footer">
-                    <h5>Contato</h5>
-                    <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
-                </div>
+                    <div class="contato-footer">
+                        <h5>Contato</h5>
+                        <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
+                    </div>
 
-                <div class="social-footer">
-                    <img src="../images/facebook.png" alt="">
-                    <img src="../images/instagram.png" alt="">
-                    <img src="../images/youtube.png" alt="">
+                    <div class="social-footer">
+                        <img src="../images/facebook.png" alt="">
+                        <img src="../images/instagram.png" alt="">
+                        <img src="../images/youtube.png" alt="">
+                    </div>
+
                 </div>
-                    
-            </div>
             </div>
         </footer>
     </div>
 
 </body>
+
+<script>
+
+window.onload = dadosFuncionario;
+
+function atualizaGraficoTrello() {
+    fetch("/tarefas/trello", {
+        method: 'GET'
+    }).then((response) => {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+
+                debugger
+                let tarefaAndamento = 0
+                let tarefaConcluida = 0
+                let tarefaAtrasada = 0
+
+                tarefaAndamento = resposta[0].emAndamento
+                tarefaConcluida =  resposta[0].concluido
+                tarefaAtrasada = resposta[0].atrasada
+
+                var ctx = document.getElementById('chart_tarefas').getContext('2d');
+
+                // And for a doughnut chart
+                var myDoughnutChart = new Chart(ctx, {
+                    type: 'doughnut',
+                
+                    data: {
+                        labels: ["Concluído", "Em andamento", "Atrasado"],
+                        datasets: [{
+                            backgroundColor: ["#009E23", "#0085FF", "#FF0505"],
+                            data: [tarefaConcluida, tarefaAndamento, tarefaAtrasada],
+                            borderWidth: 7
+                        }],
+                    },
+                
+                    options: {
+                        cutoutPercentage: 80,
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+                console.log(tarefaAndamento, tarefaConcluida, tarefaAtrasada)
+
+                // data.datasets[0].data.push(resposta.emAndamento);
+                // data.datasets[1].data.push(resposta.concluida);
+                // data.datasets[2].data.push(resposta.atrasada);
+
+            // data.push(registro.emAndamento);
+            // data.push(registro.concluida);
+            // data.push(registro.atrasada);
+
+            })
+        } else {
+            console.log("Algo deu errado!")
+        }
+    });
+    // setTimeout(hd, 5000);
+}
+
+    function trello() {
+        fetch("/tarefas/trello", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                atualizaGraficoTrello()
+                response.json().then(function (resposta) {
+                    tarefa_concluida.innerText = resposta[0].concluido
+                    tarefa_andamento.innerText = resposta[0].emAndamento
+                    tarefa_atrasada.innerText = resposta[0].atrasada
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+        // setTimeout(hd, 5000);
+    }
+
+    function hd() {
+        fetch("/tarefas/disco", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                trello()
+                response.json().then(function (resposta) {
+                    hd_funcionario.innerText = resposta[0].totalDisco
+                    disco_atual.innerText = resposta[0].discoDisponivel
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+        // setTimeout(hd, 5000);
+    }
+
+    function ram() {
+        fetch("/tarefas/ram", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                hd()
+                response.json().then(function (resposta) {
+                    ram_funcionario.innerText = resposta[0].totalRam
+                    ram_atual.innerText = resposta[0].dispRam
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+        // setTimeout(ram, 5000);
+    }
+
+    function cpu() {
+        fetch("/tarefas/cpu", {
+            method: 'GET'
+        }).then((response) => {
+            ram()
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    processador_funcionario.innerText = resposta[0].nomeCpu
+                    cpu_atual.innerText = resposta[0].usoCpu
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+         setTimeout(cpu, 5000);
+    }
+
+    function so() {
+        fetch("/tarefas/so", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                cpu()
+                response.json().then(function (resposta) {
+                    so_funcionario.innerText = `${resposta[0].soNome}`
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        })
+        // setTimeout(atualizar, 5000);
+    }
+
+    function dadosFuncionario() {
+        fetch("/tarefas/funcionario", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                so()
+                response.json().then(function (resposta) {
+                    nome_funcionario.innerText = `${resposta[0].nomeFuncionario}`
+                    registro_funcionario.innerText = `${resposta[0].idFuncionario}`
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        })
+        // setTimeout(atualizar, 5000);
+    }
+    
+
+</script>
+
 </html>

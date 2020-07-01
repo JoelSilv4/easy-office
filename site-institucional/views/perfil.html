@@ -95,10 +95,10 @@
                             <div class="info-msg">
                                 <p id="alerta-CPU"><strong><span id="total_cpu">--</span></strong> máquina(s) estão
                                     prestes a atingir o limite máximo de <strong>CPU!</strong></p>
-                                    <div id="msg-ok-cpu" style="display: none;">
-                                        <p>Tudo ok por aqui!</p>
-                                        <img src="../images/good.png" alt="">
-                                    </div>
+                                <div id="msg-ok-cpu" style="display: none;">
+                                    <p>Tudo ok por aqui!</p>
+                                    <img src="../images/good.png" alt="">
+                                </div>
                             </div>
 
                         </div>
@@ -150,10 +150,10 @@
                             <div class="info-msg">
                                 <p id="alerta-RAM"><strong><span id="total_memoria">--</span></strong> máquinas
                                     estão prestes a atingir o limite máximo de <strong>MEMÓRIA RAM!</strong></p>
-                                    <div id="msg-ok-ram" style="display: none;">
-                                        <p>Tudo ok por aqui!</p>
-                                        <img src="../images/good.png" alt="">
-                                    </div>
+                                <div id="msg-ok-ram" style="display: none;">
+                                    <p>Tudo ok por aqui!</p>
+                                    <img src="../images/good.png" alt="">
+                                </div>
                             </div>
 
                         </div>
@@ -246,17 +246,17 @@
 </body>
 
 <script>
-    
+
     window.onload = teste;
 
-    let totalMaquinasCPU = 0 
+    let totalMaquinasCPU = 0
     let totalMaquinasRam = 0
     let totalMaquinasDisco = 0
     let totalMaquinas = 0
 
-    function totalMaquinasAlertas () {
-    totalMaquinas = totalMaquinasCPU + totalMaquinasDisco + totalMaquinasRam 
-    uso_hardware.innerText = totalMaquinas
+    function totalMaquinasAlertas() {
+        totalMaquinas = totalMaquinasCPU + totalMaquinasDisco + totalMaquinasRam
+        uso_hardware.innerText = totalMaquinas
     }
 
     function atualizaAlerta() {
@@ -268,7 +268,7 @@
                     let contador = 0
                     pegaNomeEmpresa()
                     for (let index = 0; index < resposta.length; index++) {
-                        if (resposta[index].discoDisponivel > 60) {
+                        if (resposta[index].usoCpu > 60) {
                             contador++
 
                         }
@@ -289,13 +289,13 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     totalMaquinasAlertas()
-                   let contador = 0
+                    let contador = 0
                     for (let index = 0; index < resposta.length; index++) {
-                        if (resposta[index].discoDisponivel < 150) {
+                        if (resposta[index].dispRam < 150) {
                             contador++
                         }
                     }
-                    totalMaquinasRam = contador 
+                    totalMaquinasRam = contador
                     total_memoria.innerText = totalMaquinasRam
                 })
             } else {
@@ -311,13 +311,13 @@
             atualizaRam()
             if (response.ok) {
                 response.json().then(function (resposta) {
-                   let contador = 0
+                    let contador = 0
                     for (let index = 0; index < resposta.length; index++) {
                         if (resposta[index].discoDisponivel < 150) {
                             contador++
                         }
                     }
-                    totalMaquinasDisco = contador 
+                    totalMaquinasDisco = contador
                     total_disco.innerText = totalMaquinasDisco
                 })
             } else {
@@ -355,6 +355,7 @@
                 console.log("Algo deu errado!")
             }
         })
+        setTimeout(teste, 5000);
     }
 
 </script>
