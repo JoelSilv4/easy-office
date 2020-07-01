@@ -8,7 +8,7 @@ var myDoughnutChart = new Chart(ctx, {
         labels: ["Concluído","Em andamento","Atrasado"],
         datasets: [{
             backgroundColor: ["#009E23", "#0085FF", "#FF0505"],
-            data: [28, 8, 1],
+            data: [1, 1, 2],
             borderWidth: 7
         }],
     },

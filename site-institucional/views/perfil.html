@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <title>Perfil</title>
 </head>
+
 <body>
 
     <div class="sidenav">
@@ -19,14 +21,20 @@
             <div class="div-logo">
                 <img class="img-logo" src="../images/logo .png" alt="">
             </div>
-            
+
             <hr>
-            
+
             <div class="div-menu">
                 <ul>
-                    <a href="perfil"><li class="active">Perfil</li></a>
-                    <a href="funcionarios"><li>Funcionários</li></a>
-                    <a href="/"><li>Sair</li></a>
+                    <a href="perfil">
+                        <li class="active">Perfil</li>
+                    </a>
+                    <a href="funcionarios">
+                        <li>Funcionários</li>
+                    </a>
+                    <a href="/">
+                        <li>Sair</li>
+                    </a>
                 </ul>
             </div>
         </nav>
@@ -35,14 +43,14 @@
     <div class="conteudo-principal">
 
         <main>
-            
+
             <section>
                 <div class="sessao-funcionarios">
-        
+
                     <img src="../images/chefe.jpg" alt="">
-        
-                    <h1>Empresa</h1>
-        
+
+                    <h1>Empresa <span id="nome_empresa">--</span></h1>
+
                     <hr>
                 </div>
             </section>
@@ -52,29 +60,30 @@
                 <div class="funcionario">
                     <img src="../images/user.png" alt="">
                     <h1>Chefe: <span id="nome_chefe">--</span> </h1>
-    
+
                 </div>
-    
+
             </section>
 
             <section>
 
                 <div class="msg-total">
-                    <p><strong>Com base na porcentagem de uso do hardware, <span id="uso_hardware"></span> máquinas de funcionários
-                            estão prestes a atingir o limite máximo!</strong> 
+                    <p id="msg-ok"><strong>Com base na porcentagem de uso do hardware, <span id="uso_hardware">--</span>
+                            máquina(s) de funcionários
+                            estão prestes a atingir o limite máximo!</strong>
                     </p>
                 </div>
 
                 <div class="container-alertas">
 
-                        
+
                     <div class="div-alerta">
 
-                            <div class="icon-alerta">
-                                <img src="../images/cpu.png" alt="">
-                            </div>
+                        <div class="icon-alerta">
+                            <img src="../images/cpu.png" alt="">
+                        </div>
 
-                            <div class="info-alerta">
+                        <div class="info-alerta">
 
                             <div class="info-processo">
                                 <h2>CPU</h2>
@@ -84,14 +93,19 @@
                             <hr>
 
                             <div class="info-msg">
-                                <p><strong>3</strong> máquinas estão prestes a atingir o limite máximo de CPU!</p>
-                            </div>
-                                
+                                <p id="alerta-CPU"><strong><span id="total_cpu">--</span></strong> máquina(s) estão
+                                    prestes a atingir o limite máximo de <strong>CPU!</strong></p>
+                                    <div id="msg-ok-cpu" style="display: none;">
+                                        <p>Tudo ok por aqui!</p>
+                                        <img src="../images/good.png" alt="">
+                                    </div>
                             </div>
 
                         </div>
 
-                <div class="div-alerta">
+                    </div>
+
+                    <div class="div-alerta">
 
                         <div class="icon-alerta">
                             <img src="../images/hard-disk-drive.png" alt="">
@@ -99,28 +113,32 @@
 
                         <div class="info-alerta">
 
-                        <div class="info-processo">
-                            <h2>Disco</h2>
-                        </div>
+                            <div class="info-processo">
+                                <h2>Disco</h2>
+                            </div>
 
-                        <hr>
+                            <hr>
 
-                        <div class="info-msg">
-                            <p>Tudo ok por aqui!</p>
-                            <img src="../images/good.png" alt="">
-                        </div>
-                            
+                            <div class="info-msg">
+                                <p id="alerta-Disco"><strong><span id="total_disco">--</span></strong> máquina(s) estão
+                                    prestes a atingir o limite máximo de <strong>DISCO!</strong></p>
+                                <div id="msg-ok-disco" style="display: none;">
+                                    <p>Tudo ok por aqui!</p>
+                                    <img src="../images/good.png" alt="">
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
 
                     <div class="div-alerta">
 
-                            <div class="icon-alerta">
-                                <img src="../images/ram.png" alt="">
-                            </div>
+                        <div class="icon-alerta">
+                            <img src="../images/ram.png" alt="">
+                        </div>
 
-                            <div class="info-alerta">
+                        <div class="info-alerta">
 
                             <div class="info-processo">
                                 <h2>Memória</h2>
@@ -130,50 +148,56 @@
                             <hr>
 
                             <div class="info-msg">
-                                <p><strong>6</strong> máquinas estão prestes a atingir o limite máximo de memória!</p>
-                            </div>
-                                
+                                <p id="alerta-RAM"><strong><span id="total_memoria">--</span></strong> máquinas
+                                    estão prestes a atingir o limite máximo de <strong>MEMÓRIA RAM!</strong></p>
+                                    <div id="msg-ok-ram" style="display: none;">
+                                        <p>Tudo ok por aqui!</p>
+                                        <img src="../images/good.png" alt="">
+                                    </div>
                             </div>
 
                         </div>
 
-            </div>
+                    </div>
+
+                </div>
             </section>
 
             <section>
-                
+
                 <div class="container-graficos">
 
-                        <div class="div-graficos padding-graficos">
+                    <div class="div-graficos padding-graficos">
 
-                                <div class="div-produtividade">
-                                    <h2>Picos de alertas de hardware na semana</h2>
-                                </div>
-                
-                                    <div class="picos-grafico">
-    
-                                        <div class="grafico-pequeno">
-                                            <canvas class="grafico-alertas"></canvas>
-                                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-                                            <script src="../javascripts/dash-picos-alertas.js"></script>
-                                        </div>
-    
-                                        <div class="dados-picos">
-                                                <div class="picos">
-                                                        <img src="../images/up-arrow.png" alt="">
-                                                        <p>Dia da semana com mais alertas: Sexta</p>
-                                                    </div>
-                            
-                                                    <div class="picos">
-                                                        <img src="../images/down-arrow.png" alt="">
-                                                        <p>Dia da semana com menos alertas: Quarta</p>
-                                                    </div>
-    
-                                        </div>
-                
-                                    </div>
-                
+                        <div class="div-produtividade">
+                            <h2>Picos de alertas de hardware na semana</h2>
+                        </div>
+
+                        <div class="picos-grafico">
+
+                            <div class="grafico-pequeno">
+                                <canvas class="grafico-alertas"></canvas>
+                                <script
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+                                <script src="../javascripts/dash-picos-alertas.js"></script>
                             </div>
+
+                            <div class="dados-picos">
+                                <div class="picos">
+                                    <img src="../images/up-arrow.png" alt="">
+                                    <p>Dia da semana com mais alertas: Sexta</p>
+                                </div>
+
+                                <div class="picos">
+                                    <img src="../images/down-arrow.png" alt="">
+                                    <p>Dia da semana com menos alertas: Quarta</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
             </section>
@@ -185,88 +209,154 @@
             var ttChatLoaderS = document.createElement('script');
             document.tomticketChatLoaderScriptVersion = 2;
             ttChatLoaderS.src = 'https://easy-office.tomticket.com/scripts-chat/chat.min.js'
-            + '?id=EP46351'
-            + '&account=2966464P04062020023552'
-            + '&autoOpen=0'
-            + '&hideWhenOffline=0'
-            + '&d=easy-office'
-            + '&ts=' + new Date().getTime()
-            + '&ref=' + encodeURIComponent(document.URL);
+                + '?id=EP46351'
+                + '&account=2966464P04062020023552'
+                + '&autoOpen=0'
+                + '&hideWhenOffline=0'
+                + '&d=easy-office'
+                + '&ts=' + new Date().getTime()
+                + '&ref=' + encodeURIComponent(document.URL);
             document.body.appendChild(ttChatLoaderS);
             //]]>
-            </script>
-            
+        </script>
+
 
         <footer>
             <div class="container-footer">
                 <img src="../images/logo .png" alt="">
-        
+
                 <div class="container-contato">
-        
-                <div class="contato-footer">
-                    <h5>Contato</h5>
-                    <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
-                </div>
-        
-                <div class="social-footer">
-                    <img src="../images/facebook.png" alt="">
-                    <img src="../images/instagram.png" alt="">
-                    <img src="../images/youtube.png" alt="">
-                </div>
-                            
+
+                    <div class="contato-footer">
+                        <h5>Contato</h5>
+                        <p>Rua Haddock Lobo 595 <br> contato@easyoffice.com</p>
+                    </div>
+
+                    <div class="social-footer">
+                        <img src="../images/facebook.png" alt="">
+                        <img src="../images/instagram.png" alt="">
+                        <img src="../images/youtube.png" alt="">
+                    </div>
+
                 </div>
             </div>
         </footer>
     </div>
-    
+
 </body>
 
 <script>
+    
+    window.onload = teste;
 
-window.onload = teste;
+    let totalMaquinasCPU = 0 
+    let totalMaquinasRam = 0
+    let totalMaquinasDisco = 0
+    let totalMaquinas = 0
 
-function atualizaAlerta() {
-    fetch("/tarefas/cpu", {
-                        method: 'GET'
-                    }).then((response) => {
-                        console.log(response);
-                        if (response.ok) {
-                            response.json().then(function(resposta) {
-                                contador = 0
-                                index = 0
-                                resposta.map( item => {
-                                 index++
-                                if (resposta[index].usoCpu > 70) {
-                                contador++
-                                 uso_hardware.innerText = `${contador}`
-                                 } else {
-                                    uso_hardware.innerText = `${contador}`
-                                 }
-                                }) 
+    function totalMaquinasAlertas () {
+    totalMaquinas = totalMaquinasCPU + totalMaquinasDisco + totalMaquinasRam 
+    uso_hardware.innerText = totalMaquinas
+    }
 
-                               
-                            })
-                        } else {
-                            console.log("Algo deu errado!")
+    function atualizaAlerta() {
+        fetch("/tarefas/cpu", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    let contador = 0
+                    pegaNomeEmpresa()
+                    for (let index = 0; index < resposta.length; index++) {
+                        if (resposta[index].discoDisponivel > 60) {
+                            contador++
+
                         }
-                    })
- }               
+                    }
+                    totalMaquinasCPU = contador
+                    total_cpu.innerText = totalMaquinasCPU
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+    }
 
-function teste() {
-                    fetch("/tarefas/teste", {
-                        method: 'GET'
-                    }).then((response) => {
-                        console.log(response);
-                        if (response.ok) {
-                            response.json().then(function(resposta) {
-                                nome_chefe.innerText = `${resposta[0].nome}`
-                                atualizaAlerta()
-                            })
-                        } else {
-                            console.log("Algo deu errado!")
+    function atualizaRam() {
+        fetch("/tarefas/ram", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    totalMaquinasAlertas()
+                   let contador = 0
+                    for (let index = 0; index < resposta.length; index++) {
+                        if (resposta[index].discoDisponivel < 150) {
+                            contador++
                         }
-                    })
-                }
+                    }
+                    totalMaquinasRam = contador 
+                    total_memoria.innerText = totalMaquinasRam
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+    }
+
+    function atualizaDisco() {
+        fetch("/tarefas/disco", {
+            method: 'GET'
+        }).then((response) => {
+            atualizaRam()
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                   let contador = 0
+                    for (let index = 0; index < resposta.length; index++) {
+                        if (resposta[index].discoDisponivel < 150) {
+                            contador++
+                        }
+                    }
+                    totalMaquinasDisco = contador 
+                    total_disco.innerText = totalMaquinasDisco
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+    }
+
+    function pegaNomeEmpresa() {
+        fetch("/tarefas/empresa", {
+            method: 'GET'
+        }).then((response) => {
+            console.log(response);
+            atualizaDisco()
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    nome_empresa.innerText = resposta[0].nomeEmpresa
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        });
+    }
+
+    function teste() {
+        fetch("/tarefas/teste", {
+            method: 'GET'
+        }).then((response) => {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    nome_chefe.innerText = `${resposta[0].nome}`
+                    atualizaAlerta()
+                })
+            } else {
+                console.log("Algo deu errado!")
+            }
+        })
+    }
+
 </script>
 
 </html>
